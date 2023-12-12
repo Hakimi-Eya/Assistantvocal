@@ -10,5 +10,3 @@
 #### Crée ta clé API Open AI ici
 https://platform.openai.com/account/api-keys
 
-#### Mes Tutos YouTube ChatGpt
-https://www.youtube.com/@jeanviet/search?query=%23chatgpt
