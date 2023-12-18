@@ -10,3 +10,12 @@
 #### Crée ta clé API Open AI ici
 https://platform.openai.com/account/api-keys
 
+#### Mes Tutos YouTube ChatGpt
+https://www.youtube.com/@jeanviet/search?query=%23chatgpt
+
+ancien code : https://github.com/jeanviet/chatgpt-python
+nv code : https://github.com/Hakimi-Eya/Assistantvocal
+
+exécution :
+cd chatgpt-python
+python voice.py
