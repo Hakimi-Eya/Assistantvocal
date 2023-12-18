@@ -1,7 +1,7 @@
 import openai
 
 # Configurer une clé d'API valide
-openai.api_key = "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"
+openai.api_key = "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"
 
 
 # Demander à l'utilisateur de saisir une recherche
