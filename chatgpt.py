@@ -1,7 +1,7 @@
 import openai
 
 # Configurer une clé d'API valide
-openai.api_key = "tacleapi-xxxxxXXXX1111222abc"
+openai.api_key = "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"
 
 
 while True:
