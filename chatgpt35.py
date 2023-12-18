@@ -1,7 +1,7 @@
 import openai
 
 # Configurer une clé d'API valide
-openai.api_key = "sk-tacleapi-XXXXXXXXXXXXXXXXXXX"
+openai.api_key = "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"
 
 
 # Initialisation de la conversation avec un message système
