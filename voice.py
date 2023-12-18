@@ -1,14 +1,16 @@
 import tkinter as tk
 from tkinter import scrolledtext
+import threading
 import openai
 import speech_recognition as sr
 import pyttsx3
 import pywhatkit
 
-# Configure a valid API key
-openai.api_key = "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"
+# Configure OpenAI API key:
+openai.api_key = "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"
 
 class VoiceAssistantApp:
+    #C'est une référence à la fenêtre principale de l'application (Tkinter Tk instance).
     def __init__(self, master):
         self.master = master
         master.title("Voice Assistant")
@@ -29,14 +31,18 @@ class VoiceAssistantApp:
         self.engine = pyttsx3.init()
 
     def listen_command(self):
-        # Listen for the voice command
+        # Start a new thread for listening and processing the command
+        threading.Thread(target=self.process_command).start()
+
+    def process_command(self):
+        # crée un contexte avec un microphone en utilisant la bibliothèque SpeechRecognition.
+        #Tout ce qui est enregistré par le microphone pendant l'exécution de ce bloc de code sera capturé.
         with sr.Microphone() as source:
             print("Ecoute...")
             self.text_output.insert(tk.END, "Ecoute...\n")
             self.text_output.update_idletasks()
             audio = self.recognizer.listen(source)
 
-        # Transcribe the voice command
         try:
             prompt = self.recognizer.recognize_google(audio, language="fr-FR")
             print("Tu as dit: " + prompt)
